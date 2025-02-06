@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { useState } from "react";
 import "./App.css";
@@ -15,20 +15,22 @@ function App() {
 
   return (
     <Router basename="/abdn_pub_decider">
-      <div className="relative w-full h-full">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#FFFCC5] to-[#FFFFF3] z-0"></div>
+      <Routes>
+        <div className="relative w-full h-full">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#FFFCC5] to-[#FFFFF3] z-0"></div>
 
-        {/* Content wrapper */}
-        <div className="relative z-10">
-          <Banner />
-          <Wheel setSelectedPub={setSelectedPub} />
-          <Results selectedPub={selectedPub} />
-          <LastSpins selectedPub={selectedPub} />
-          <GeneralInfo />
-          <PubList />
-          <Footer />
+          {/* Content wrapper */}
+          <div className="relative z-10">
+            <Banner />
+            <Wheel setSelectedPub={setSelectedPub} />
+            <Results selectedPub={selectedPub} />
+            <LastSpins selectedPub={selectedPub} />
+            <GeneralInfo />
+            <PubList />
+            <Footer />
+          </div>
         </div>
-      </div>
+      </Routes>
     </Router>
   );
 }

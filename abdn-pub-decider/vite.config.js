@@ -8,4 +8,5 @@ export default defineConfig({
   build: {
     outDir: "build", // Set build output to 'build' folder for GitHub Pages
   },
+  base: "/abdn_pub_decider/", // Add this line to set the base path
 });
